@@ -56,7 +56,7 @@ class SplashActivity : AppCompatActivity() {
             val i = Intent(applicationContext, MainActivity::class.java)
             startActivity(i)
             finish()
-        }
+         }
     }
 
     companion object {
