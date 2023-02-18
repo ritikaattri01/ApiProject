@@ -50,7 +50,7 @@ class SplashActivity : AppCompatActivity() {
         Log.e("lifeCycle", "onRestart: ")
     }
 
-    fun navigateToMainActivity() {
+    private fun navigateToMainActivity() {
         lifecycleScope.launch {
             delay(DELAY)
             val i = Intent(applicationContext, MainActivity::class.java)
