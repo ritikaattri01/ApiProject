@@ -1,12 +1,12 @@
-package com.app.apiproject
+package com.app.apiproject.ui.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.app.apiproject.R
 import com.app.apiproject.databinding.ActivityMainBinding
-import com.app.apiproject.ui.DetailPageActivity
 import com.app.apiproject.ui.adapter.PullRequestAdapter
 import com.app.apiproject.ui.models.PullRequestModel
 

@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">Github</string>
+    <string name="str_login">Login</string>
+    <string name="str_EMAIL">EMAIL</string>
+    <string name="str_PASS">PASSWORD</string>
+    <string name="str_SIGNUP">SIGN UP</string>
+    <string name="str_for_pass">FORGOT\nPASSWORD?</string>
+    <string name="str_for_password">Forgot Password?</string>
+    <string name="str_desc_reset_pw">if you need help to resetting your password \n we can help by sending you a link to reset it.</string>
+    <string name="hint_mobile">+91 9876543210</string>
+    <string name="str_continue">CONTINUE</string>
+    <string name="str_otp_verification">OTP verification</string>
+    <string name="str_name">NAME</string>
+    <string name="str_surname">SURNAME</string>
+    <string name="str_repeat_pass">REPEAT PASSWORD</string>
+    <string name="str_reset_pass">RESET PASSWORD</string>
+    <string name="str_val">OTP VALIDATION</string>
 </resources>

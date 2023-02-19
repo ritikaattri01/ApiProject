@@ -1,11 +1,10 @@
-package com.app.apiproject.ui
+package com.app.apiproject.ui.activity
 
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
-import com.app.apiproject.MainActivity
 import com.app.apiproject.R
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -53,7 +52,7 @@ class SplashActivity : AppCompatActivity() {
     private fun navigateToMainActivity() {
         lifecycleScope.launch {
             delay(DELAY)
-            val i = Intent(applicationContext, MainActivity::class.java)
+            val i = Intent(applicationContext, LoginActivity::class.java)
             startActivity(i)
             finish()
          }

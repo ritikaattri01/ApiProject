@@ -7,4 +7,6 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="edit_txt_color">#AEB5B6</color>
+    <color name="for_pass_color">#8B9293</color>
 </resources>

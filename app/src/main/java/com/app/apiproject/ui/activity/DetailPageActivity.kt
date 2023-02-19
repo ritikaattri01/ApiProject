@@ -1,4 +1,4 @@
-package com.app.apiproject.ui
+package com.app.apiproject.ui.activity
 
 import android.content.ContentValues.TAG
 import androidx.appcompat.app.AppCompatActivity
