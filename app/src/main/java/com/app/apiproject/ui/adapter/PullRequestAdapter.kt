@@ -23,6 +23,7 @@ class PullRequestAdapter (private val mList: List<PullRequestModel>) :
         val pullRequestModel = mList[position]
         holder.imageView.setImageResource(pullRequestModel.image)
         holder.textView.text = pullRequestModel.name
+        holder.textDesc.text = pullRequestModel.desc
 
         holder.itemView.setOnClickListener {
             onItemClick?.invoke(pullRequestModel)
@@ -36,5 +37,6 @@ class PullRequestAdapter (private val mList: List<PullRequestModel>) :
     class ViewHolder(ItemView: View) : RecyclerView.ViewHolder(ItemView) {
         val imageView: ImageView = itemView.findViewById(R.id.imageView)
         val textView: TextView = itemView.findViewById(R.id.textView)
+        val textDesc: TextView = itemView.findViewById(R.id.textDesc)
     }
 }

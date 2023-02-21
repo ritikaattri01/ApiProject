@@ -22,10 +22,12 @@ class DetailPageActivity : AppCompatActivity() {
         Log.e(TAG, "onCreate:name ${detail}", )
         if (detail != null){
             val textView : TextView = findViewById(R.id.txt_detail)
+            val textDesc : TextView = findViewById(R.id.text_Desc)
             val imageView : ImageView = findViewById(R.id.img_detail)
 
 
             textView.text = detail.name
+            textDesc.text = detail.desc
             imageView.setImageResource(detail.image)
 
 

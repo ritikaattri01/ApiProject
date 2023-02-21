@@ -25,8 +25,27 @@ class MainActivity : AppCompatActivity() {
         binding!!.recyclerView.layoutManager = LinearLayoutManager(this)
         val data = ArrayList<PullRequestModel>()
 
-        data.add(PullRequestModel(R.drawable.ic_android_black_24dp, "BOOKS ", "this is a book"))
-        data.add(PullRequestModel(R.drawable.ic_android_black_24dp, "Business ", "helafjjwehf"))
+        data.add(PullRequestModel(R.drawable.bake, "BOOKS ", "this is a book"))
+        data.add(PullRequestModel(R.drawable.img, "Business ", "Google LLC is an American multinational technology company focusing on online advertising, search engine technology, cloud computing, computer software, quantum computing, e-commerce, artificial intelligence, and consumer electronics."))
+
+        data.add(PullRequestModel(R.drawable.bake, "BOOKS ", "this is a book"))
+        data.add(PullRequestModel(R.drawable.img, "Business ", "Google LLC is an American multinational technology company focusing on online advertising, search engine technology, cloud computing, computer software, quantum computing, e-commerce, artificial intelligence, and consumer electronics."))
+
+        data.add(PullRequestModel(R.drawable.bake, "BOOKS ", "this is a book"))
+        data.add(PullRequestModel(R.drawable.img, "Business ", "Google LLC is an American multinational technology company focusing on online advertising, search engine technology, cloud computing, computer software, quantum computing, e-commerce, artificial intelligence, and consumer electronics."))
+
+        data.add(PullRequestModel(R.drawable.bake, "BOOKS ", "this is a book"))
+        data.add(PullRequestModel(R.drawable.img, "Business ", "Google LLC is an American multinational technology company focusing on online advertising, search engine technology, cloud computing, computer software, quantum computing, e-commerce, artificial intelligence, and consumer electronics."))
+
+        data.add(PullRequestModel(R.drawable.bake, "BOOKS ", "this is a book"))
+        data.add(PullRequestModel(R.drawable.img, "Business ", "Google LLC is an American multinational technology company focusing on online advertising, search engine technology, cloud computing, computer software, quantum computing, e-commerce, artificial intelligence, and consumer electronics."))
+
+        data.add(PullRequestModel(R.drawable.bake, "BOOKS ", "this is a book"))
+        data.add(PullRequestModel(R.drawable.img, "Business ", "Google LLC is an American multinational technology company focusing on online advertising, search engine technology, cloud computing, computer software, quantum computing, e-commerce, artificial intelligence, and consumer electronics."))
+
+        data.add(PullRequestModel(R.drawable.bake, "BOOKS ", "this is a book"))
+        data.add(PullRequestModel(R.drawable.img, "Business ", "Google LLC is an American multinational technology company focusing on online advertising, search engine technology, cloud computing, computer software, quantum computing, e-commerce, artificial intelligence, and consumer electronics."))
+
 
 
         pullRequestAdapter = PullRequestAdapter(data)
@@ -34,7 +53,7 @@ class MainActivity : AppCompatActivity() {
 
         pullRequestAdapter.onItemClick = {
             val intent = Intent(this, DetailPageActivity::class.java)
-            intent.putExtra("detail_data", it) as PullRequestModel
+            intent.putExtra("detail_data", it)
             startActivity(intent)
         }
 

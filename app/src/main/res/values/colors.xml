@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="edit_txt_color">#AEB5B6</color>
     <color name="for_pass_color">#8B9293</color>
+    <color name="cardview_color">#dce2e5</color>
 </resources>

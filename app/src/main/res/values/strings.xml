@@ -15,4 +15,12 @@
     <string name="str_repeat_pass">REPEAT PASSWORD</string>
     <string name="str_reset_pass">RESET PASSWORD</string>
     <string name="str_val">OTP VALIDATION</string>
+    <string name="str_price">Rs. 799</string>
+    <string name="str_tocart">ADD TO CART</string>
+    <string name="str_home">Home</string>
+    <string name="str_Categories">Categories</string>
+    <string name="str_More">More</string>
+    <string name="str_Profile">Profile</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
