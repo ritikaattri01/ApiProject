@@ -2,10 +2,8 @@ package com.app.apiproject
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.ContactsContract.Profile
 import androidx.fragment.app.Fragment
 import com.app.apiproject.databinding.ActivityMain2Binding
-import com.app.apiproject.databinding.ActivityMainBinding
 import com.app.apiproject.ui.CategoriesFragment
 import com.app.apiproject.ui.HomeFragment
 import com.app.apiproject.ui.MoreFragment
@@ -35,8 +33,8 @@ class MainActivity2 : AppCompatActivity() {
     private fun replaceFragment(fragment: Fragment){
 
         val fragmentManger = supportFragmentManager
-        val framentTransaction = fragmentManger.beginTransaction()
-        framentTransaction.replace(R.id.container, fragment)
-        framentTransaction.commit()
+        val fragmentTransaction = fragmentManger.beginTransaction()
+        fragmentTransaction.replace(R.id.container, fragment)
+        fragmentTransaction.commit()
     }
 }

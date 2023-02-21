@@ -5,7 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.app.apiproject.R
+import com.app.apiproject.ui.adapter.FragmentAdapter
+import com.app.apiproject.ui.models.CategoriesModel
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -21,6 +25,14 @@ class CategoriesFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+
+    private lateinit var adapter: FragmentAdapter
+    private lateinit var recyclerView: RecyclerView
+    private lateinit var newArrayList: ArrayList<CategoriesModel>
+
+    lateinit var imageId : Array<Int>
+    lateinit var nameId : Array<String>
+    lateinit var descId : Array<String>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -56,5 +68,66 @@ class CategoriesFragment : Fragment() {
                     putString(ARG_PARAM2, param2)
                 }
             }
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        data()
+        val layoutManager = LinearLayoutManager(context)
+        recyclerView = view.findViewById(R.id.fra_recyclerview)
+        recyclerView.layoutManager = layoutManager
+        recyclerView.setHasFixedSize(true)
+        adapter = FragmentAdapter(newArrayList)
+        recyclerView.adapter=  adapter
+    }
+
+    private fun data(){
+        newArrayList = arrayListOf<CategoriesModel>()
+
+        imageId = arrayOf(
+
+            R.drawable.bake,
+            R.drawable.addicon,
+            R.drawable.baby,
+            R.drawable.bakery,
+            R.drawable.banana,
+            R.drawable.bananapng,
+            R.drawable.bake,
+            R.drawable.img,
+            R.drawable.bake,
+            R.drawable.img,
+        )
+        nameId = arrayOf(
+
+            getString(R.string.str_Categories),
+            getString(R.string.str_Categories),
+            getString(R.string.str_Categories),
+            getString(R.string.str_Categories),
+            getString(R.string.str_Categories),
+            getString(R.string.str_Categories),
+            getString(R.string.str_Categories),
+            getString(R.string.str_Categories),
+            getString(R.string.str_Categories),
+            getString(R.string.str_Categories)
+        )
+
+        descId = arrayOf(
+
+            getString(R.string.google),
+            getString(R.string.google),
+            getString(R.string.google),
+            getString(R.string.google),
+            getString(R.string.google),
+            getString(R.string.google),
+            getString(R.string.google),
+            getString(R.string.google),
+            getString(R.string.google),
+            getString(R.string.google),
+        )
+        for (i in imageId.indices){
+            val categories = CategoriesModel(imageId[i],nameId[i],descId[i])
+            newArrayList.add(categories)
+        }
+
     }
 }

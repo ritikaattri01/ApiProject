@@ -4,11 +4,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.CategoriesFragment">
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/fra_recyclerview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Categories Fragment" />
-
+        tools:listitem="@layout/fra_card_design"/>
 </FrameLayout>

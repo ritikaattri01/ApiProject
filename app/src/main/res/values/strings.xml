@@ -21,6 +21,11 @@
     <string name="str_Categories">Categories</string>
     <string name="str_More">More</string>
     <string name="str_Profile">Profile</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="str_my_acc">My Account</string>
+    <string name="str_setting">Setting</string>
+    <string name="str_logout">Logout</string>
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="google">Google LLC is an American multinational technology company focusing on online advertising, search engine technology, cloud computing, computer software, quantum computing, e-commerce, artificial intelligence, and consumer electronics.</string>
 </resources>
