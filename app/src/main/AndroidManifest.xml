@@ -9,6 +9,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ApiProject">
         <activity
+            android:name=".ProductListActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".HorizontalScrollView"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".ui.NavigationDrawerActivity"
             android:exported="false">
             <meta-data

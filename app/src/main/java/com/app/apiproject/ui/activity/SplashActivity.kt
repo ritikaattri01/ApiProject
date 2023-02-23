@@ -54,7 +54,7 @@ class SplashActivity : AppCompatActivity() {
     private fun navigateToMainActivity() {
         lifecycleScope.launch {
             delay(DELAY)
-            val i = Intent(applicationContext, NavigationDrawerActivity::class.java)
+            val i = Intent(applicationContext, LoginActivity::class.java)
             startActivity(i)
             finish()
          }

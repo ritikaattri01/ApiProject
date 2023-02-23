@@ -5,129 +5,47 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.app.apiproject.R
+import com.app.apiproject.databinding.FragmentCategoriesBinding
 import com.app.apiproject.ui.adapter.FragmentAdapter
 import com.app.apiproject.ui.models.CategoriesModel
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [CategoriesFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class CategoriesFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
-    private lateinit var adapter: FragmentAdapter
+    private lateinit var binding: FragmentCategoriesBinding
     private lateinit var recyclerView: RecyclerView
-    private lateinit var newArrayList: ArrayList<CategoriesModel>
-
-    lateinit var imageId : Array<Int>
-    lateinit var nameId : Array<String>
-    lateinit var descId : Array<String>
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_categories, container, false)
+        binding = FragmentCategoriesBinding.inflate(inflater, container, false)
+        recyclerView = binding.fraRecyclerview
+        return binding.root
     }
-
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment CategoriesFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            CategoriesFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
-    }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        data()
-        val layoutManager = LinearLayoutManager(context)
-        recyclerView = view.findViewById(R.id.fra_recyclerview)
-        recyclerView.layoutManager = layoutManager
-        recyclerView.setHasFixedSize(true)
-        adapter = FragmentAdapter(newArrayList)
-        recyclerView.adapter=  adapter
+
+        recyclerView.layoutManager = GridLayoutManager(context,3)
+
+        val data = ArrayList<CategoriesModel>()
+        data.add(CategoriesModel(R.drawable.perfume4, "Fragrance"))
+        data.add(CategoriesModel(R.drawable.beardo10, "Beardo"))
+        data.add(CategoriesModel(R.drawable.beardo7, "Bath and Body"))
+        data.add(CategoriesModel(R.drawable.shampoo1, "Shampoo"))
+        data.add(CategoriesModel(R.drawable.caffeine1, "Caffeine"))
+        data.add(CategoriesModel(R.drawable.watch1, "Watches"))
+        data.add(CategoriesModel(R.drawable.s_watch9, "Smart Watches"))
+        data.add(CategoriesModel(R.drawable.rayban2, "Sunglasses"))
+        data.add(CategoriesModel(R.drawable.shirt1, "Top Wear"))
+        data.add(CategoriesModel(R.drawable.shoes1, "Formal Footwear"))
+        data.add(CategoriesModel(R.drawable.shoes9, "Casual Footwear"))
+
+
+
+        val adapter = FragmentAdapter(data)
+        recyclerView.adapter = adapter
     }
 
-    private fun data(){
-        newArrayList = arrayListOf<CategoriesModel>()
-
-        imageId = arrayOf(
-
-            R.drawable.bake,
-            R.drawable.addicon,
-            R.drawable.baby,
-            R.drawable.bakery,
-            R.drawable.banana,
-            R.drawable.bananapng,
-            R.drawable.bake,
-            R.drawable.img,
-            R.drawable.bake,
-            R.drawable.img,
-        )
-        nameId = arrayOf(
-
-            getString(R.string.str_Categories),
-            getString(R.string.str_Categories),
-            getString(R.string.str_Categories),
-            getString(R.string.str_Categories),
-            getString(R.string.str_Categories),
-            getString(R.string.str_Categories),
-            getString(R.string.str_Categories),
-            getString(R.string.str_Categories),
-            getString(R.string.str_Categories),
-            getString(R.string.str_Categories)
-        )
-
-        descId = arrayOf(
-
-            getString(R.string.google),
-            getString(R.string.google),
-            getString(R.string.google),
-            getString(R.string.google),
-            getString(R.string.google),
-            getString(R.string.google),
-            getString(R.string.google),
-            getString(R.string.google),
-            getString(R.string.google),
-            getString(R.string.google),
-        )
-        for (i in imageId.indices){
-            val categories = CategoriesModel(imageId[i],nameId[i],descId[i])
-            newArrayList.add(categories)
-        }
-
-    }
 }

@@ -1,6 +1,8 @@
 <resources>
-    <string name="app_name">Github</string>
+    <string name="app_name">URBAN HOUSE</string>
     <string name="str_login">Login</string>
+    <string name="str_user_name">User Name</string>
+    <string name="str_edit_profile">Edit Profile</string>
     <string name="str_EMAIL">EMAIL</string>
     <string name="str_PASS">PASSWORD</string>
     <string name="str_SIGNUP">SIGN UP</string>
@@ -26,6 +28,19 @@
     <string name="str_logout">Logout</string>
     <string name="nav_open">Open</string>
     <string name="nav_close">Close</string>
+    <string name="beardo">Beardo</string>
+    <string name="str_caffeine">Caffeine</string>
+    <string name="str_campus">Campus</string>
+    <string name="str_adidas">Adidas</string>
+    <string name="str_ocean">Ocean</string>
+    <string name="ustra">Ustra</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="str_slamdunk_deals">Slamdunk Deals</string>
+    <string name="str_Fragrance">Fragrance</string>
+    <string name="str_footwear">Footwear</string>
+    <string name="str_watches">Watches</string>
+    <string name="str_topwear">Top Wear</string>
+
+
     <string name="google">Google LLC is an American multinational technology company focusing on online advertising, search engine technology, cloud computing, computer software, quantum computing, e-commerce, artificial intelligence, and consumer electronics.</string>
 </resources>

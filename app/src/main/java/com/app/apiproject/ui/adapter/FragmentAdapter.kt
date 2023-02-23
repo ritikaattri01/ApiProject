@@ -13,7 +13,7 @@ class FragmentAdapter(private val categoryList : ArrayList<CategoriesModel>) :
     RecyclerView.Adapter<FragmentAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.fra_card_design,
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.grid_view_design,
             parent, false)
         return ViewHolder(view)
     }
@@ -22,7 +22,6 @@ class FragmentAdapter(private val categoryList : ArrayList<CategoriesModel>) :
         val categories = categoryList[position]
         holder.imageView.setImageResource(categories.img)
         holder.textView.text = categories.name
-        holder.textDesc.text = categories.desc
     }
 
     override fun getItemCount(): Int {
@@ -32,7 +31,6 @@ class FragmentAdapter(private val categoryList : ArrayList<CategoriesModel>) :
     class ViewHolder(ItemView: View) : RecyclerView.ViewHolder(ItemView) {
         val imageView: ImageView = itemView.findViewById(R.id.fra_imageView)
         val textView: TextView = itemView.findViewById(R.id.fra_textView)
-        val textDesc: TextView = itemView.findViewById(R.id.fra_textDesc)
     }
 
 }

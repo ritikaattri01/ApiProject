@@ -4,10 +4,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.CategoriesFragment">
-    
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_100dp"
+        android:src="@drawable/photo"/>
+
     <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="@dimen/dimen_110dp"
         android:id="@+id/fra_recyclerview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:listitem="@layout/fra_card_design"/>
+        tools:listitem="@layout/grid_view_design"/>
 </FrameLayout>

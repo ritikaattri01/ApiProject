@@ -13,7 +13,6 @@
         android:layout_margin="@dimen/dimen_10dp">
 
         <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/fra_imageView"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:src="@mipmap/ic_launcher"
@@ -22,18 +21,18 @@
             app:layout_constraintEnd_toEndOf="parent"/>
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/fra_textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/str_name"
             android:textSize="@dimen/dimen_20dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:layout_marginStart="@dimen/dimen_30dp"
             android:layout_marginTop="@dimen/dimen_20dp"/>
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/fra_textDesc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/str_reset_pass"
