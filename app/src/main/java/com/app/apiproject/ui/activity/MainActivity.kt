@@ -28,8 +28,6 @@ class MainActivity : AppCompatActivity() {
         data.add(PullRequestModel(R.drawable.shoes1, "BOOKS ", "this is a book"))
         data.add(PullRequestModel(R.drawable.beardo1, "Business ", "Google LLC is an computing, e-commerce, artificial intelligence, and consumer electronics."))
 
-
-
         pullRequestAdapter = PullRequestAdapter(data)
         binding!!.recyclerView.adapter = pullRequestAdapter
 
@@ -38,6 +36,5 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("detail_data", it)
             startActivity(intent)
         }
-
     }
 }

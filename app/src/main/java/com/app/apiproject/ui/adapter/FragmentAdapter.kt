@@ -8,9 +8,12 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.app.apiproject.R
 import com.app.apiproject.ui.models.CategoriesModel
+import com.app.apiproject.ui.models.PullRequestModel
 
 class FragmentAdapter(private val categoryList : ArrayList<CategoriesModel>) :
     RecyclerView.Adapter<FragmentAdapter.ViewHolder>() {
+
+    var onItemClick : ((CategoriesModel) -> Unit)? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.grid_view_design,
@@ -22,6 +25,10 @@ class FragmentAdapter(private val categoryList : ArrayList<CategoriesModel>) :
         val categories = categoryList[position]
         holder.imageView.setImageResource(categories.img)
         holder.textView.text = categories.name
+
+        holder.itemView.setOnClickListener {
+            onItemClick?.invoke(categories)
+        }
     }
 
     override fun getItemCount(): Int {
@@ -31,6 +38,8 @@ class FragmentAdapter(private val categoryList : ArrayList<CategoriesModel>) :
     class ViewHolder(ItemView: View) : RecyclerView.ViewHolder(ItemView) {
         val imageView: ImageView = itemView.findViewById(R.id.fra_imageView)
         val textView: TextView = itemView.findViewById(R.id.fra_textView)
+
+
     }
 
 }

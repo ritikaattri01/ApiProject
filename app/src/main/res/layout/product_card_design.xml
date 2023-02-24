@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
@@ -9,6 +9,7 @@
         android:layout_height="wrap_content">
 
         <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:layout_marginTop="@dimen/dimen_10dp"
             android:id="@+id/product_img"
             android:layout_width="match_parent"
             android:layout_height="@dimen/dimen_120dp"
@@ -36,18 +37,30 @@
             android:textColor="@color/edit_txt_color"
             android:layout_marginTop="@dimen/dimen_4dp"
             android:layout_marginStart="@dimen/dimen_10dp"
+            android:maxLength="20"
             app:layout_constraintTop_toBottomOf="@id/product_name"
             app:layout_constraintStart_toStartOf="parent"/>
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/product_sign"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen_14dp"
+            android:src="@drawable/ic_outline_currency_rupee_24"
+            app:layout_constraintTop_toBottomOf="@id/product_desc"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="@dimen/dimen_10dp"
+            android:layout_marginTop="@dimen/dimen_9dp"/>
+
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/product_price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/str_price"
+            android:textSize="@dimen/dimen_14dp"
             android:textColor="@color/black"
             app:layout_constraintTop_toBottomOf="@id/product_desc"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="@dimen/dimen_10dp"
+            app:layout_constraintStart_toEndOf="@id/product_sign"
             android:layout_marginTop="@dimen/dimen_6dp"/>
 
         <androidx.constraintlayout.utils.widget.ImageFilterView

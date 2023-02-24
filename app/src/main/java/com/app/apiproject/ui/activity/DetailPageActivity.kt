@@ -19,7 +19,7 @@ class DetailPageActivity : AppCompatActivity() {
         setContentView(binding!!.root)
 
         val detail = intent.getParcelableExtra<PullRequestModel>("detail_data")
-        Log.e(TAG, "onCreate:name ${detail}", )
+        Log.e(TAG, "onCreate:name ${detail}")
         if (detail != null){
             val textView : TextView = findViewById(R.id.txt_detail)
             val textDesc : TextView = findViewById(R.id.text_Desc)

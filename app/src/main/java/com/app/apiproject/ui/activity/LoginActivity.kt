@@ -14,17 +14,16 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val edtxt_email = binding.edTxtEmail
-        val edtxt_pass = binding.edTxtPass
-        val btn_login = binding.btnLogin
+        val edTxtEmail = binding.edTxtEmail
+        val edTxtPass = binding.edTxtPass
+        val btnLogin = binding.btnLogin
 
-        btn_login.setOnClickListener {
-            if (edtxt_email.text.toString().trim().isNotEmpty() ||
-            edtxt_email.text.toString().trim().isNotBlank()){
-            val intent = Intent(this, MainActivity2::class.java)
-            startActivity(intent)
-            } else {
+        btnLogin.setOnClickListener {
+            if (edTxtEmail.text.toString().trim().isEmpty() || edTxtPass.text.toString().trim().isEmpty()) {
                 Toast.makeText(applicationContext, "Enter Email", Toast.LENGTH_SHORT).show()
+            } else {
+                val intent = Intent(this, MainActivity2::class.java)
+                startActivity(intent)
             }
         }
 
