@@ -4,7 +4,7 @@
     <item android:top="-500dp" android:bottom="0dp" android:left="-100dp" android:right="-100dp">
         <shape>
             <corners android:radius="500dp" />
-            <solid android:color="@color/purple_700" />
+            <solid android:color="@color/toolbar_bg_color" />
         </shape>
     </item>
 </layer-list>

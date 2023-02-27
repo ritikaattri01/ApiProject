@@ -48,8 +48,8 @@
             android:src="@drawable/ic_outline_currency_rupee_24"
             app:layout_constraintTop_toBottomOf="@id/product_desc"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="@dimen/dimen_10dp"
-            android:layout_marginTop="@dimen/dimen_9dp"/>
+            android:layout_marginStart="@dimen/dimen_5dp"
+            android:layout_marginTop="@dimen/dimen_7dp"/>
 
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -61,7 +61,7 @@
             android:textColor="@color/black"
             app:layout_constraintTop_toBottomOf="@id/product_desc"
             app:layout_constraintStart_toEndOf="@id/product_sign"
-            android:layout_marginTop="@dimen/dimen_6dp"/>
+            android:layout_marginTop="@dimen/dimen_4dp"/>
 
         <androidx.constraintlayout.utils.widget.ImageFilterView
             android:id="@+id/ic_fav"

@@ -34,7 +34,7 @@ class CategoriesFragment : Fragment() {
         val data = ArrayList<CategoriesModel>()
         data.add(CategoriesModel(R.drawable.perfume4, "Fragrance"))
         data.add(CategoriesModel(R.drawable.beardo10, "Beardo"))
-        data.add(CategoriesModel(R.drawable.shoes1, "Formal Footwear"))
+        data.add(CategoriesModel(R.drawable.shoes1, "Footwear"))
         data.add(CategoriesModel(R.drawable.shampoo1, "Shampoo"))
         data.add(CategoriesModel(R.drawable.caffeine1, "Caffeine"))
         data.add(CategoriesModel(R.drawable.watch1, "Watches"))
@@ -42,8 +42,6 @@ class CategoriesFragment : Fragment() {
         data.add(CategoriesModel(R.drawable.rayban2, "Sunglasses"))
         data.add(CategoriesModel(R.drawable.shirt1, "Top Wear"))
         data.add(CategoriesModel(R.drawable.beardo7, "Bath and Body"))
-        data.add(CategoriesModel(R.drawable.shoes9, "Casual Footwear"))
-
 
         fragmentadapter = FragmentAdapter(data)
         recyclerView.adapter = fragmentadapter
